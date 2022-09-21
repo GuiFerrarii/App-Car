@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    
+    <ion-buttons>
+      <ion-back-button color="tertiary"  defaulHref ="">
+        <ion-icon name="return-down-back-outline"></ion-icon>
+      </ion-back-button>
+    </ion-buttons>
+    <ion-title id="tit" color="tertiary">Produtos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let todosDados of todosDados" routerLink="/detalhes-produtos/{{todosDados.id}}">
+      <ion-label>{{todosDados.nome}}</ion-label>
+      <p>R$ {{todosDados.valor}}</p>
+
+    </ion-item>
+    <ion-icon id="fff" name="build-outline" color="tertiary" size="large"></ion-icon>
+    <ion-icon id="ff" name="hammer-outline" color="tertiary" size="large"></ion-icon>
+  </ion-list>
+  <ion-fab vertical="top" horizontal="end" slot="fixed" edge="true">
+    <ion-fab-button size="small" routerLink="/detalhes-produtos/-1" color="tertiary">
+      <ion-icon  name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  
+
+</ion-content>
